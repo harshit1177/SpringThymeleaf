@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>If unless</title>
+</head>
+
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>S_No</th>
+				<th>name</th>
+				<th>email</th>
+				<th>gender</th>
+				<th>Gender Short Format</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each ="var, abcStat : ${studentAttribute}">
+				<td th:text ="${abcStat.count}"></td>
+				<td th:text ="${var.name}"></td>
+				<td th:text ="${var.email}"></td>
+				<td th:text ="${var.gender}"></td>
+
+				<td th:switch ="${var.gender}">
+					<p th:case ="'Male'">M</p>
+					<p th:case ="'Female'">F</p>
+					<p th:case ="*">O</p>
+				</td>	
+			</tr>
+
+		</tbody>
+
+	</table>
+</body>
+</html>

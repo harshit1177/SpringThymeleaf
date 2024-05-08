@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Register Form</title>
+</head>
+
+<body>
+   
+   <div align="center">
+     
+      <div style = "border-style: solid; width:600px">
+         <h3>Registration Form</h3>
+         <form
+            role ="form"
+            method ="post"
+            th:action="@{/register/save}"
+            th:object="${userFormAttributeValue}"
+         >
+         
+          <label>Full name</label>
+          <input type = "text" th:field = "*{name}"/>
+          <br/>
+          
+            <label>email</label>
+          <input type = "text" th:field = "*{email}"/>
+          <br/>
+          
+            <label>password</label>
+          <input type = "text" th:field = "*{password}"/>
+          <br/>
+          
+            <label>Gender</label>
+          <input type = "radio" th:field = "*{gender}" value="Male" />Male
+           <input type = "radio" th:field = "*{gender}" value="Female" />FeMale 
+           <input type = "radio" th:field = "*{gender}" value="Other" />Other
+          <br/>
+          
+           <button type = "submit">Register</button> 
+           </br>
+         
+         </form> 
+         </div>  
+      </div>
+        
+</body>
+</html>

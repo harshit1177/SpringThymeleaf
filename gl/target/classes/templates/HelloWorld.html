@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Thymeleaf Spring Project</title>
+</head>
+
+<body>
+   <div th:insert="~{headerAndFooter/header :: header}"></div>
+	<h2 th:text="${message2}"></h2>
+	<h2 th:text="${message3}"></h2>
+</body>
+</html>

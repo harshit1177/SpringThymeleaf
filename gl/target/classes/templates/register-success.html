@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Register Success</title>
+</head>
+
+<body>
+	<h1>Registration is successful</h1>
+	<div>
+		<p>
+			Name : <strong th:text="${userFormAttributeValue3.name}"></strong>
+		</p>
+		<p>
+			email : <strong th:text="${userFormAttributeValue3.email}"></strong>
+		</p>
+		<p>
+			password : <strong th:text="${userFormAttributeValue3.password}"></strong>
+		</p>
+		<p>
+			gender : <strong th:text="${userFormAttributeValue3.gender}"></strong>
+		</p>
+
+
+	</div>
+</body>
+</html>

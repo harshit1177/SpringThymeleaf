@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html  lang="en"
+       xmlns:th = "http://www.thymeleaf.org"
+>
+<head>
+<meta charset="UTF-8">
+<title>Student Details</title>
+</head>
+<body>
+
+<div th:insert="~{headerAndFooter/header :: header}"></div>
+<h1> Student Details are as follows</h1>
+<h2>Details:</h2>
+<div>
+   <p> Name: <strong th:text = "${studentAttribute.name}"></strong></p>
+   <p> Email: <strong th:text = "${studentAttribute.email}"></strong></p>
+   <p> Gender: <strong th:text = "${studentAttribute.gender}"></strong></p>
+</div>
+
+<div th:object = "${studentAttribute}">
+   <p> Name: <strong th:text = "*{name}"></strong></p>
+   <p> Email: <strong th:text = "*{email}"></strong></p>
+   <p> Gender: <strong th:text = "*{gender}"></strong></p>
+   
+</div>
+</body>
+</html>
